@@ -4,7 +4,7 @@ import "./shop.styles.scss";
 import CategoryPreview from "routes/categories-preview/categories-preview.component";
 import Category from "routes/category/category.component";
 import { useDispatch } from "react-redux";
-import { fetchCategoriesAsync } from "store/categories/category.action";
+import { fetchCategoriesStart } from "store/categories/category.action";
 import Spinner from "components/spinner/spinner.component";
 import { selectCategoriesIsLoading } from "store/categories/category.selector";
 import { useSelector } from "react-redux";
@@ -12,8 +12,9 @@ import { useSelector } from "react-redux";
 const Shop = () => {
   const isLoading = useSelector(selectCategoriesIsLoading);
   const dispatch = useDispatch();
+  
   useEffect(() => {
-    dispatch(fetchCategoriesAsync());
+    dispatch(fetchCategoriesStart());
   }, []);
 
   if (isLoading) return <Spinner />;

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectCategoriesMap } from "store/categories/category.selector";
 import ProductCard from "../../components/product-card/product-card.component";
-
 import "./category.styles.scss";
 
 const Category = () => {

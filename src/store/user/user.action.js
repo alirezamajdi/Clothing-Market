@@ -1,4 +1,4 @@
-import { createAction } from "utils/firebase/reducer/reducer.utils";
+import { createAction } from "utils/reducer/reducer.utils";
 import { USER_ACTION_TYPES } from "./user.types";
 
 export const setCurrentUser = (user) => {
@@ -44,6 +44,6 @@ export const signOutStart = () =>
 
 export const signOutSuccess = () =>
   createAction(USER_ACTION_TYPES.SIGN_OUT_SUCCESS);
-  
+
 export const signOutFail = (error) =>
   createAction(USER_ACTION_TYPES.SIGN_UP_FAILED, error);

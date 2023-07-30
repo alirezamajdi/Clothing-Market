@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useSelector } from "react-redux";
 import {
   clearItemFromCart,
@@ -42,4 +43,4 @@ const CheckoutItem = ({ cartItem }) => {
   );
 };
 
-export default CheckoutItem;
+export default memo(CheckoutItem);

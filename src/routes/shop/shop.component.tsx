@@ -12,16 +12,19 @@ import { useSelector } from "react-redux";
 const Shop = () => {
   const isLoading = useSelector(selectCategoriesIsLoading);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(fetchCategoriesStart());
   }, []);
 
-  if (isLoading) return <Spinner />;
+  // if (isLoading) return <Spinner />;
 
   return (
+   
     <Routes>
+
       <Route index element={<CategoryPreview />} />
+
       <Route path=":category" element={<Category />} />
     </Routes>
   );

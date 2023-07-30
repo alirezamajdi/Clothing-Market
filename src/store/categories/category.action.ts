@@ -12,6 +12,7 @@ export const fetchCategoriesStart = withMatcher((): FetchCategoriesStart => {
   return createAction(CATEGORY_ACTION_TYPES.FETCH_CATEGORIES_START);
 });
 
+
 export const fetchCategoriesSuccess = withMatcher((categories: Category[]): FetchCategoriesSuccess => {
   return createAction(
     CATEGORY_ACTION_TYPES.FETCH_CATEGORIES_SUCCESS,

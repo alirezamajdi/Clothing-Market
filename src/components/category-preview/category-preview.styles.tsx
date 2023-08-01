@@ -16,4 +16,11 @@ export const CategoryPreviewContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
   }
+  @media screen and (max-width: 800px) {
+    align-items: center;
+    .preview {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 15px;
+    }
+  }
 `;

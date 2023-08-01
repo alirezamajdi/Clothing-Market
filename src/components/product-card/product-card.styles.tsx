@@ -22,6 +22,14 @@ export const ProductCardContainer = styled.div`
     top: 255px;
     display: none;
   }
+  @media screen and (max-width: 800px) {
+    button {
+      display: block;
+      opacity: 0.9;
+      min-width: unset;
+      padding: 0px 10px;
+    }
+  }
 
   &:hover {
     img {
@@ -48,6 +56,19 @@ export const ProductCardContainer = styled.div`
 
     .price {
       width: 10%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+    margin: 20px 0px;
+    &:hover {
+      img {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
     }
   }
 `;
